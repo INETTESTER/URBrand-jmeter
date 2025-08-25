@@ -4,8 +4,8 @@
 ##########################################################################
 ##########################################################################
 ##########################################################################
-                     API="template" 
-                     google_sheet="https://docs.google.com/spreadsheets/d/1H7UgGtAy3JKvulLqGXVm5zeNq1FdNKonMxxBETQtjXQ/edit?gid=1610289956#gid=1610289956" 
+                     API="Filter_Specific_Product" 
+                     google_sheet="https://docs.google.com/spreadsheets/d/1ufZQ7CavRslhfbw2y5We5GU2-TIFA9N6wQt97nxiwzg/edit?gid=1585513650#gid=1585513650" 
                      id="1"                 #เปลี่ยน id ทุกครั้งที่ยิง
                      user="1";              #จำนวนผู้ใช้งาน
                      duration="1";          #หน่วยวินาที

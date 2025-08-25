@@ -25,13 +25,207 @@
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
       <hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ran1" enabled="true">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Filter_Specific_Product" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;role_user&quot;: &quot;ext_buyer&quot;,&#xd;
+    &quot;company_id&quot;: &quot;-1&quot;,&#xd;
+    &quot;limit&quot;: 20,&#xd;
+    &quot;page&quot;: 1,&#xd;
+    &quot;category&quot;: &quot;835&quot;,&#xd;
+    &quot;seller_shop_id&quot;: &quot;3446&quot;,&#xd;
+    &quot;orderBy&quot;: &quot;&quot;,&#xd;
+    &quot;status_product&quot;: &quot;&quot;,&#xd;
+    &quot;promotion_buy_get_free&quot;: {&#xd;
+        &quot;minimumBuy&quot;: 0,&#xd;
+        &quot;totalFree&quot;: 0&#xd;
+    }&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">pentest-ngc.one.th</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/backend_2/partner/search/product/filter</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-key</stringProp>
+                <stringProp name="Header.value">7f91a017cb8d40e3b591bc24d29be5fd-f8c0ab7d27b14d5e9dc30ee460a187ef</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-secret</stringProp>
+                <stringProp name="Header.value">b90e40cc6744f8797ec87ad0a7a03da-ec7f93c9242545b9a66e8c225cfdfe74d4c3f8499fd74d4d8991a7df60c32072</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Filter_All_Product" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;role_user&quot;:&quot;ext_buyer&quot;,&quot;company_id&quot;:&quot;-1&quot;,&quot;limit&quot;:20,&quot;page&quot;:1,&quot;category&quot;:&quot;&quot;,&quot;seller_shop_id&quot;:&quot;3446&quot;,&quot;orderBy&quot;:&quot;&quot;,&quot;status_product&quot;:&quot;&quot;,&quot;promotion_buy_get_free&quot;:{&quot;minimumBuy&quot;:0,&quot;totalFree&quot;:0}}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">pentest-ngc.one.th</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/backend_2/partner/search/product/filter</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-key</stringProp>
+                <stringProp name="Header.value">7f91a017cb8d40e3b591bc24d29be5fd-f8c0ab7d27b14d5e9dc30ee460a187ef</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-secret</stringProp>
+                <stringProp name="Header.value">b90e40cc6744f8797ec87ad0a7a03da-ec7f93c9242545b9a66e8c225cfdfe74d4c3f8499fd74d4d8991a7df60c32072</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Product_Detail" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;product_id&quot;:&quot;337300&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">pentest-ngc.one.th</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/backend/api/erp/get_product_detail</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-key</stringProp>
+                <stringProp name="Header.value">7f91a017cb8d40e3b591bc24d29be5fd-f8c0ab7d27b14d5e9dc30ee460a187ef</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-secret</stringProp>
+                <stringProp name="Header.value">b90e40cc6744f8797ec87ad0a7a03da-ec7f93c9242545b9a66e8c225cfdfe74d4c3f8499fd74d4d8991a7df60c32072</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Search_Bar" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;role_user&quot;:&quot;ext_buyer&quot;,&quot;company_id&quot;:-1,&quot;seller_shop_id&quot;:&quot;3446&quot;,&quot;keyword&quot;:&quot;เครื่อง&quot;,&quot;order_by_price&quot;:&quot;&quot;,&quot;category&quot;:&quot;&quot;,&quot;status_product&quot;:&quot;&quot;,&quot;filter_tag_shop_id&quot;:&quot;&quot;,&quot;limit&quot;:20,&quot;orderBy&quot;:&quot;&quot;,&quot;page&quot;:1}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">pentest-ngc.one.th</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/backend_2/partner/search/product/search_bar</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-key</stringProp>
+                <stringProp name="Header.value">7f91a017cb8d40e3b591bc24d29be5fd-f8c0ab7d27b14d5e9dc30ee460a187ef</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-secret</stringProp>
+                <stringProp name="Header.value">b90e40cc6744f8797ec87ad0a7a03da-ec7f93c9242545b9a66e8c225cfdfe74d4c3f8499fd74d4d8991a7df60c32072</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="List_User_Address" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">k6.io</stringProp>
+          <stringProp name="HTTPSampler.domain">pentest-ngc.one.th</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/backend/api/erp/list_user_address</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -44,14 +238,182 @@
           <boolProp name="HTTPSampler.md5">false</boolProp>
           <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
-        <hashTree/>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ran2" enabled="false">
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-key</stringProp>
+                <stringProp name="Header.value">7f91a017cb8d40e3b591bc24d29be5fd-f8c0ab7d27b14d5e9dc30ee460a187ef</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-secret</stringProp>
+                <stringProp name="Header.value">b90e40cc6744f8797ec87ad0a7a03da-ec7f93c9242545b9a66e8c225cfdfe74d4c3f8499fd74d4d8991a7df60c32072</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Detail_Cart" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&quot;role_user&quot;:&quot;ext_buyer&quot;}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">pentest-ngc.one.th</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/backend/api/erp/detail_cart</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-key</stringProp>
+                <stringProp name="Header.value">7f91a017cb8d40e3b591bc24d29be5fd-f8c0ab7d27b14d5e9dc30ee460a187ef</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-secret</stringProp>
+                <stringProp name="Header.value">b90e40cc6744f8797ec87ad0a7a03da-ec7f93c9242545b9a66e8c225cfdfe74d4c3f8499fd74d4d8991a7df60c32072</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get_Cart" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;seller_shop_id&quot;: &quot;3446&quot;,&#xd;
+    &quot;role_user&quot;: &quot;ext_buyer&quot;,&#xd;
+    &quot;pay_type&quot;: &quot;general&quot;,&#xd;
+    &quot;product_to_calculate&quot;: [&#xd;
+        {&#xd;
+            &quot;product_id&quot;: 337298,&#xd;
+            &quot;vat_type&quot;: 0,&#xd;
+            &quot;product_attribute_id&quot;: &quot;-1&quot;,&#xd;
+            &quot;attribute_priority_1&quot;: &quot;&quot;,&#xd;
+            &quot;attribute_priority_2&quot;: &quot;&quot;,&#xd;
+            &quot;quantity&quot;: 1,&#xd;
+            &quot;revenue_default&quot;: 15490,&#xd;
+            &quot;revenue_vat&quot;: 15490,&#xd;
+            &quot;vat_revenue&quot;: 0,&#xd;
+            &quot;an_id&quot;: null,&#xd;
+            &quot;vat_default&quot;: &quot;yes&quot;&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;type_shipping&quot;: &quot;online&quot;,&#xd;
+    &quot;address&quot;: [&#xd;
+        {&#xd;
+            &quot;detail&quot;: &quot;บ้านเลขที่ 10 ชั้นที่ - อาคาร - หมู่บ้าน - หมู่ที่ - ซอย อนามัยงามเจริญ 25 แยก 2-7 ถนน -&quot;,&#xd;
+            &quot;id&quot;: 23905,&#xd;
+            &quot;first_name&quot;: &quot;INET&quot;,&#xd;
+            &quot;last_name&quot;: &quot;ทดสอบ&quot;,&#xd;
+            &quot;email&quot;: &quot;aekbadin.ch@inet.co.th&quot;,&#xd;
+            &quot;note_address&quot;: &quot;&quot;,&#xd;
+            &quot;phone&quot;: &quot;0985979990&quot;,&#xd;
+            &quot;province&quot;: &quot;กรุงเทพมหานคร&quot;,&#xd;
+            &quot;district&quot;: &quot;บางขุนเทียน&quot;,&#xd;
+            &quot;sub_district&quot;: &quot;ท่าข้าม&quot;,&#xd;
+            &quot;zip_code&quot;: &quot;10150&quot;,&#xd;
+            &quot;house_no&quot;: &quot;10&quot;,&#xd;
+            &quot;room_no&quot;: &quot;-&quot;,&#xd;
+            &quot;floor&quot;: &quot;-&quot;,&#xd;
+            &quot;building_name&quot;: &quot;-&quot;,&#xd;
+            &quot;moo_ban&quot;: &quot;-&quot;,&#xd;
+            &quot;moo_no&quot;: &quot;-&quot;,&#xd;
+            &quot;soi&quot;: &quot;อนามัยงามเจริญ 25&quot;,&#xd;
+            &quot;yaek&quot;: &quot;2-7&quot;,&#xd;
+            &quot;street&quot;: &quot;-&quot;,&#xd;
+            &quot;phone_ext&quot;: &quot;&quot;,&#xd;
+            &quot;status&quot;: &quot;Y&quot;&#xd;
+        }&#xd;
+    ],&#xd;
+    &quot;all_can_size_product&quot;: {&#xd;
+        &quot;width&quot;: 0,&#xd;
+        &quot;length&quot;: 0,&#xd;
+        &quot;height&quot;: 0,&#xd;
+        &quot;weight&quot;: 0&#xd;
+    },&#xd;
+    &quot;invoice_id&quot;: &quot;&quot;,&#xd;
+    &quot;required_invoice&quot;: &quot;no&quot;,&#xd;
+    &quot;company_id&quot;: -1,&#xd;
+    &quot;company_position&quot;: -1,&#xd;
+    &quot;com_perm_id&quot;: -1,&#xd;
+    &quot;shipping_data&quot;: null,&#xd;
+    &quot;point&quot;: &quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">pentest-ngc.one.th</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/backend/api/erp/get_cart</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-key</stringProp>
+                <stringProp name="Header.value">7f91a017cb8d40e3b591bc24d29be5fd-f8c0ab7d27b14d5e9dc30ee460a187ef</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-secret</stringProp>
+                <stringProp name="Header.value">b90e40cc6744f8797ec87ad0a7a03da-ec7f93c9242545b9a66e8c225cfdfe74d4c3f8499fd74d4d8991a7df60c32072</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="List_Category" enabled="false">
           <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
           <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
             <collectionProp name="Arguments.arguments"/>
           </elementProp>
-          <stringProp name="HTTPSampler.domain">k6.io</stringProp>
+          <stringProp name="HTTPSampler.domain">pentest-ngc.one.th</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/backend/api/erp/list_category</stringProp>
           <stringProp name="HTTPSampler.method">GET</stringProp>
           <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
           <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
@@ -64,7 +426,74 @@
           <boolProp name="HTTPSampler.md5">false</boolProp>
           <intProp name="HTTPSampler.ipSourceType">0</intProp>
         </HTTPSamplerProxy>
-        <hashTree/>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-key</stringProp>
+                <stringProp name="Header.value">7f91a017cb8d40e3b591bc24d29be5fd-f8c0ab7d27b14d5e9dc30ee460a187ef</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-secret</stringProp>
+                <stringProp name="Header.value">b90e40cc6744f8797ec87ad0a7a03da-ec7f93c9242545b9a66e8c225cfdfe74d4c3f8499fd74d4d8991a7df60c32072</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Order_List" enabled="false">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">{&#xd;
+    &quot;role_user&quot;: &quot;ext_buyer&quot;,&#xd;
+    &quot;order_status&quot;: &quot;&quot;,&#xd;
+    &quot;create_date&quot;: &quot;&quot;&#xd;
+}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">pentest-ngc.one.th</stringProp>
+          <stringProp name="HTTPSampler.protocol">https</stringProp>
+          <stringProp name="HTTPSampler.path">/api/backend/api/erp/get_buyer_order_list?page=1&amp;limit=10</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">false</boolProp>
+          <boolProp name="HTTPSampler.image_parser">false</boolProp>
+          <boolProp name="HTTPSampler.concurrentDwn">false</boolProp>
+          <stringProp name="HTTPSampler.concurrentPool">6</stringProp>
+          <boolProp name="HTTPSampler.md5">false</boolProp>
+          <intProp name="HTTPSampler.ipSourceType">0</intProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-key</stringProp>
+                <stringProp name="Header.value">7f91a017cb8d40e3b591bc24d29be5fd-f8c0ab7d27b14d5e9dc30ee460a187ef</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">api-secret</stringProp>
+                <stringProp name="Header.value">b90e40cc6744f8797ec87ad0a7a03da-ec7f93c9242545b9a66e8c225cfdfe74d4c3f8499fd74d4d8991a7df60c32072</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">content-type</stringProp>
+                <stringProp name="Header.value">application/json</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+        </hashTree>
         <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
           <boolProp name="ResultCollector.error_logging">false</boolProp>
           <objProp>
